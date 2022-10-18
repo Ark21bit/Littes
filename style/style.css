@@ -1,7 +1,7 @@
 :root{
-    --body-m:1rem;
-    --content-width:80rem;
-    --content-p-width:82rem;
+    --font-body:'Proxima Nova';
+    --body-m:16px;
+    --content-width:1180px;    
 }
 
 body{
@@ -9,6 +9,9 @@ body{
     margin: 0;
     display: flex;
     flex-direction: column;
+    font-family: var(--font-body);
+    font-weight: 400;
+    overflow-y: scroll;
 }
 
 .Prose {
@@ -46,12 +49,6 @@ main{
     box-sizing: border-box;
 }
 
-body {    
-    font-family: var(--font-Metropolis);
-    font-weight: 400;
-    overflow-y: scroll;
-}
-
 ul, ol {
     list-style: none;
 }
@@ -85,3 +82,101 @@ textarea {
 input {
     font-family: inherit;
 }
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    gap: 10px;
+    border-radius: 7px;
+    width: fit-content;
+    padding: 22px 36px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;    
+}
+
+.btn img{
+    flex-shrink: 0;
+}
+
+.btn-red{
+    background: #D62423;
+    color: white;
+}
+
+.btn-white{
+    background: white;
+    color: #D62423;
+}
+
+.ul{    
+    gap: 12px;
+}
+
+.ul li{
+    display: flex;   
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 121%; 
+}
+
+.ul li::before{
+    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    width: 25px;    
+    height: 3px;
+    border-radius: 100px;   
+    margin: auto 0;
+    margin-right: 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+    flex-shrink: 0;
+}
+
+.ul-c2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.red{
+    color: rgba(250, 51, 48, 1);
+}
+
+.advantages{
+    display: flex;
+    row-gap: 40px;    
+    flex-wrap: wrap;
+    background-color: #232323;
+    color: #FFFFFF;
+    border-radius: 20px;
+    
+}
+
+.border-castom{
+    height: 100%;
+}
+
+.advantages>.item .heading{    
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 121%;
+    margin-bottom: 30px;
+}
+
+.advantages>.item .ul{    
+    margin-bottom: 40px;    
+    max-width: 503px;
+}
+
+.advantages>.item .btn{    
+    margin-top: auto;        
+}
+
+.advantages>.item{
+    display: flex;
+    flex-direction: column;
+    padding: 45px 90px;    
+}
+
