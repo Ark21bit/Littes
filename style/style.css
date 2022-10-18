@@ -1,0 +1,87 @@
+:root{
+    --body-m:1rem;
+    --content-width:80rem;
+    --content-p-width:82rem;
+}
+
+body{
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.Prose {
+    display: grid;
+    grid-template-columns: [full-start] minmax(var(--body-m), 1fr) [main-start] minmax(0, var(--content-width)) [main-end] minmax(var(--body-m), 1fr) [full-end];
+    grid-auto-rows: max-content;
+}
+
+.Prose > * {
+  grid-column: main;
+}
+
+.grid-full {
+    grid-column: full;
+}
+
+.container{
+    width: 100%;
+    max-width: calc(var(--content-width) + var(--body-m) + var(--body-m)) ;
+    padding-left: var(--body-m);    
+    padding-right: var(--body-m);    
+}
+
+main{
+    flex-grow: 1;
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {    
+    font-family: var(--font-Metropolis);
+    font-weight: 400;
+    overflow-y: scroll;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    font-family: inherit;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    resize: none;
+    background: none;
+}
+
+input {
+    font-family: inherit;
+}
