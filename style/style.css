@@ -149,6 +149,18 @@ input {
     color: #D62423;
 }
 
+.relative{
+    position: relative;
+}
+
+.border-castom{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, 0);
+}
+
 .ul{    
     display: flex;
     flex-direction: column;
@@ -163,7 +175,7 @@ input {
 }
 
 .ul li::before{
-    content: "";
+    content: "⸺";
     display: flex;
     align-items: center;
     justify-content: center;    
@@ -173,9 +185,16 @@ input {
     margin: auto 0;
     margin-right: 20px;    
     flex-shrink: 0;
+    overflow: hidden;
+    
 }
-.ul li::before{    
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='27' height='3' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1.5h25' stroke='%23fff' stroke-opacity='.4' stroke-width='1.5' stroke-linecap='round'/%3e%3c/svg%3e");
+
+.ul-red{
+    color: #D62423;
+}
+
+.ul-gray{
+    color:  rgba(35, 35, 35, 0.8);
 }
 
 .ul-c2 {
@@ -187,9 +206,54 @@ input {
     color: rgba(250, 51, 48, 1);
 }
 
-.advantages{
+.font_body{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 121%;
+}
+
+.h3{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 121%;
+}
+
+.breadcrumb {
     display: flex;
-    row-gap: 40px;    
+    border: 1px solid #DADCD9;
+    border-radius: 6px;
+    padding: 0 16px;
+    width: fit-content;
+    color: #AAADA9;
+    margin-bottom: 25px;
+}
+
+.breadcrumb .item::after{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    content: " ";
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='9' height='23' viewBox='0 0 9 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 0.5L7.5 12L1.5 23' stroke='%23DADCD9'/%3e%3c/svg%3e ");
+    margin: 0 16px;
+    height: 100%;
+    width: 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.breadcrumb .item:last-child::after{    
+    content:none;
+}
+
+.breadcrumb .item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.advantages{
+    display: flex;   
+     
     flex-wrap: wrap;
     background-color: #232323;
     color: #FFFFFF;
@@ -197,8 +261,8 @@ input {
     margin-bottom: 50px;
 }
 
-.border-castom{
-    height: 100%;
+.advantages li:before{
+    color: rgba(255, 255, 255, 0.4);
 }
 
 .advantages>.item .heading{    
@@ -224,15 +288,15 @@ input {
 }
 
 .product .download ul li{
-    padding: 25px 0 29px;
-    border-top: 1px solid rgba(0, 0, 0, 0.15);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 25px 0 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);   
     max-width: 520px;
 }
 
 .product {
     display: flex;
     gap: 80px;    
+    margin-bottom: 50px;
 }
 
 .product>* {
@@ -284,3 +348,125 @@ input {
     text-align: end;
 }
 
+.notes{
+    padding: 60px 0 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    margin-bottom: 40px;
+}
+
+.notes .h3{
+    margin-bottom: 20px;
+}
+
+.card_box_4{
+    display: grid;
+    grid-template-columns: [full-start] 1fr 1fr 1fr 1fr [full-end];
+}
+
+.variants{    
+    column-gap: 27px;
+    row-gap: 50px;
+}
+
+.variants img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+.variants p{
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 121%;
+    text-align: center;
+    margin-top: 25px;
+}
+
+
+
+@media  (max-width:1056px) {
+    .border-castom{
+        display: none;
+    }
+}
+
+@media  (max-width:989px) {
+    .card_box_4{
+        display: grid;
+        grid-template-columns:[full-start] 1fr 1fr [full-end];
+    }
+
+    .btn{
+        width: 100%;
+    }
+
+    .advantages .item{
+        width: 100%;
+        padding: 35px 45px;
+    }
+
+    .product {
+        flex-direction: column;
+    }
+
+    .product>.img img{
+        margin: auto;
+    }
+
+    .product .download ul li {        
+        max-width: none;
+    }
+
+    .product .img .download {        
+        display: none;
+    }
+
+    .product .description .download {        
+        display: block;
+    }
+
+    .product .heading {       
+        max-width: none;       
+    }
+
+    .product .description .specifications .item {        
+        max-width: none; 
+    }
+
+    .product .description .btn{        
+        margin-bottom: 40px;
+    }
+
+    .product .download ul li:first-child  {        
+        border: none;        
+    }
+    
+    .notes{
+        border: none;
+    }
+
+
+}
+
+@media  (max-width:649px) {
+
+    .breadcrumb{
+        display: none;
+    }
+
+    .card_box_4{
+        display: grid;
+        grid-template-columns: [full-start] 1fr [full-end];
+    }
+
+    .advantages .item{
+        width: 100%;
+        padding: 25px;
+    }
+
+    .ul-c2{
+        display: none;
+    }
+}
