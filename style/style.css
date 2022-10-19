@@ -12,6 +12,7 @@ body{
     font-family: var(--font-body);
     font-weight: 400;
     overflow-y: scroll;
+    color: #232323;
 }
 
 .Prose {
@@ -83,6 +84,44 @@ input {
     font-family: inherit;
 }
 
+/* Стили tabs */
+
+.ui-tabs-tab {
+    display: flex;
+
+    color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 100px;
+    width: fit-content;
+    cursor: pointer;     
+    
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 121%;
+}
+
+.ui-tabs-tab a{
+    padding: 9px 26px;
+}
+
+.ui-tabs-active {
+    color: #232323;
+    border: 1px solid #232323;     
+}
+
+.ui-tabs-nav {
+    display: flex;
+    gap: 16px;
+    overflow: auto;
+    padding-bottom: 30px;
+}
+
+.ui-tabs-nav::-webkit-scrollbar {
+    height: 0px;
+}
+
+/* Стили */
+
 .btn{
     display: flex;
     align-items: center;
@@ -111,6 +150,8 @@ input {
 }
 
 .ul{    
+    display: flex;
+    flex-direction: column;
     gap: 12px;
 }
 
@@ -130,9 +171,11 @@ input {
     height: 3px;
     border-radius: 100px;   
     margin: auto 0;
-    margin-right: 20px;
-    background-color: rgba(255, 255, 255, 0.4);
+    margin-right: 20px;    
     flex-shrink: 0;
+}
+.ul li::before{    
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='27' height='3' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1.5h25' stroke='%23fff' stroke-opacity='.4' stroke-width='1.5' stroke-linecap='round'/%3e%3c/svg%3e");
 }
 
 .ul-c2 {
@@ -151,7 +194,7 @@ input {
     background-color: #232323;
     color: #FFFFFF;
     border-radius: 20px;
-    
+    margin-bottom: 50px;
 }
 
 .border-castom{
@@ -178,5 +221,66 @@ input {
     display: flex;
     flex-direction: column;
     padding: 45px 90px;    
+}
+
+.product .download ul li{
+    padding: 25px 0 29px;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    max-width: 520px;
+}
+
+.product {
+    display: flex;
+    gap: 80px;    
+}
+
+.product>* {
+    flex: 1 1 0;  
+}
+
+.product .heading{
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 121%;    
+    max-width: 586px;
+    margin-bottom: 25px;
+}
+
+.product .cost{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    color: #232323;
+    margin-bottom: 50px;
+}
+
+.product .description .download{
+    display: none;
+}
+
+.product .description .specifications  {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+.product .description .tabs  {
+    margin-bottom: 50px;   
+}
+
+.product .description .specifications .item {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 121%;
+    max-width: 350px;
+}
+
+.product .description .specifications .value{
+    flex: 0 0 50%;
+    text-align: end;
 }
 
