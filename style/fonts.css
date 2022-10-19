@@ -6,7 +6,7 @@
         url('../fonts/proximaNova/ProximaNova-Bold.woff2') format('woff2'),
         url('../fonts/proximaNova/ProximaNova-Bold.woff') format('woff'),
         url('../fonts/proximaNova/ProximaNova-Bold.ttf') format('truetype');
-    font-weight: bold;
+    font-weight: 700;
     font-style: normal;
 }
 
@@ -18,7 +18,7 @@
         url('../fonts/proximaNova/ProximaNova-Regular.woff2') format('woff2'),
         url('../fonts/proximaNova/ProximaNova-Regular.woff') format('woff'),
         url('../fonts/proximaNova/ProximaNova-Regular.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
 }
 
