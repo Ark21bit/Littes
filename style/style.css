@@ -245,6 +245,7 @@ input {
     line-height: 121%;
 }
 
+
 .h2-small{
     font-weight: 400;
     font-size: 32px;
@@ -441,6 +442,7 @@ input {
     margin-top: 25px;
 }
 
+
 .catalog{
     gap: 25px;
 }
@@ -456,6 +458,46 @@ input {
     font-weight: 400;
     font-size: 12px;
     line-height: 121%;
+
+.privileges{
+    padding: 60px 81px;
+    background: #1D1D1D;
+    border-radius: 30px;
+    color: white;
+    gap: 10px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 121%;
+}
+
+.privileges .text{  
+    grid-column: span 3;
+    margin-bottom: 30px;    
+}
+
+.privileges .text>.heading{  
+    margin-bottom: 15px;
+}
+
+.privileges .btn{  
+    align-self: flex-start;
+    width: 100%;
+}
+
+.privileges>.item{
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 45px 26px;
+    min-height: 393px;    
+    color: #676767;
+}
+
+.privileges>.item>.heading{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 121%;
+    color: #D62423;    
+    margin-bottom: 9px;
 }
 
 .catalog>.item>img{
@@ -715,13 +757,42 @@ input {
         padding: 0;       
         margin-bottom: 80px;
     }
-    
+
+
+    .privileges .text{  
+        grid-column: full;
+        margin-bottom: 20px;
+    }
+
+    .privileges>.item{        
+        padding: 35px 30px;      
+        min-height: auto;  
+    }
 }
 
 @media  (max-width:649px) {
 
+
     .font_body {        
         font-size: 12px;        
+}
+    .btn{
+        padding: 14px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .btn img, .btn svg{
+        width: 15px;
+    }
+
+    .h2{        
+        font-size: 20px;        
+    }
+
+    .breadcrumb{
+        display: none;
     }
 
     .btn{
@@ -809,6 +880,20 @@ input {
         margin-bottom: 10px;
     }
 
+
+    .privileges{
+        border-radius: 15px;
+        padding: 35px 20px;        
+        font-size: 12px;
+    }
+
+    .privileges .btn{
+        margin-bottom: 20px;
+    }
+
+    .privileges .text {        
+        margin-bottom: 10px;
+    }
     .privileges .text>.heading {
         margin-bottom: 10px;
     }
@@ -823,6 +908,7 @@ input {
         font-size: 16px;
         line-height: 121%;
     }
+
 
     .product .cost {        
         font-size: 16px;
@@ -850,5 +936,6 @@ input {
     .product>.description .specifications {       
         gap: 12px;
     }
+
     
 }
