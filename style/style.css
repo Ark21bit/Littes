@@ -412,13 +412,13 @@ input {
 }
 
 .notes{
-    padding: 60px 0 40px;
+    padding: 40px 0 60px;
     border-top: 1px solid rgba(0, 0, 0, 0.15);
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
     margin-bottom: 40px;
 }
 
-.notes .h3{
+.notes>.heading{
     margin-bottom: 20px;
 }
 
@@ -432,6 +432,7 @@ input {
     height: auto;
     object-fit: cover;
     object-position: center;
+    aspect-ratio: 23 / 21;
 }
 
 .variants p{
@@ -458,6 +459,7 @@ input {
     font-weight: 400;
     font-size: 12px;
     line-height: 121%;
+}
 
 .privileges{
     padding: 60px 81px;
@@ -555,10 +557,7 @@ input {
 
 .catalog-header>.heading{
     display: flex;
-    align-items: flex-start;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 121%;
+    align-items: flex-start;    
     column-gap: 25px;
     row-gap: 5px;
 }
@@ -688,6 +687,7 @@ input {
 
     .product>.img img{
         margin: auto;
+        aspect-ratio: 23 / 21;
     }
 
     .product .download ul li {        
@@ -768,6 +768,10 @@ input {
         padding: 35px 30px;      
         min-height: auto;  
     }
+
+    .filter {
+        margin-bottom: 20px;
+    }
 }
 
 @media  (max-width:649px) {
@@ -789,6 +793,10 @@ input {
 
     .h2{        
         font-size: 20px;        
+    }
+
+    .h3{ 
+        font-size: 20px;  
     }
 
     .breadcrumb{
@@ -833,13 +841,38 @@ input {
         grid-template-columns: [full-start] 1fr [full-end];
     }
 
+    .catalog>.item {        
+        padding: 5px 30px 35px;        
+    }
+
     .catalog>.item>.peculiarities>.item{        
         min-width: 40%;
+        padding: 8px 4px;
+        border-radius: 5px;
+    }    
+
+    .catalog>.item>.cost {    
+        margin-bottom: 10px;           
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    .catalog>.item>.description {
+        margin-bottom: 10px;        
+    }
+
+    .catalog-header {        
+        margin-bottom: 20px;
     }
 
     .catalog-header>.heading{
         flex-direction: column;
     }    
+
+    .catalog-header>.heading span {        
+        font-size: 14px;
+        line-height: 17px;
+    }
 
     .breadcrumb{
         display: none;
@@ -880,7 +913,6 @@ input {
         margin-bottom: 10px;
     }
 
-
     .privileges{
         border-radius: 15px;
         padding: 35px 20px;        
@@ -909,6 +941,9 @@ input {
         line-height: 121%;
     }
 
+    .product {        
+        margin-bottom: 20px;
+    }
 
     .product .cost {        
         font-size: 16px;
@@ -936,6 +971,34 @@ input {
     .product>.description .specifications {       
         gap: 12px;
     }
-
     
+    .notes {
+        padding: 0;
+        margin-bottom: 60px;
+    }
+
+    .notes>.heading {
+        margin-bottom: 10px;
+    }
+    
+    .variants {
+        column-gap: 27px;
+        row-gap: 20px;
+    }
+
+    .variants .heading{
+        margin-bottom: 5px;
+    }
+
+    .filter-btn + label {        
+        padding: 12px 26px;
+        border: 1px solid #D2D2D2;
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .filter {
+        margin-bottom: 15px;
+    }
+
 }
